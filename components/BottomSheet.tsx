@@ -30,14 +30,14 @@ export const DownloadPicture = ({
 
   return (
     <BottomSheet
-      ref={bottomSheetRef}
-      index={0}
-      snapPoints={["99%"]}
-      enablePanDownToClose
-      onChange={handleSheetChanges}
-      handleComponent={null} // 👈 Removes the top drag handle
- 
-    >
+    ref={bottomSheetRef}
+    index={0}
+    snapPoints={["100%"]}
+    enablePanDownToClose
+    onChange={handleSheetChanges}
+    handleComponent={null} // remove top drag handle
+  >
+  
       <BottomSheetView style={styles.contentContainer}>
         {wallpaper ? (
           <>
@@ -46,6 +46,7 @@ export const DownloadPicture = ({
               style={styles.wallpaperImage}
               resizeMode="cover"
             />
+            <Text style={{fontSize:30, fontWeight:"bold"}}>{wallpaper.name}</Text>
             <Text style={styles.sheetTitle}>Get Wallpaper</Text>
           </>
         ) : (
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     alignItems: "center",
-    padding: 20,
+  
   },
   wallpaperImage: {
     width: "100%",

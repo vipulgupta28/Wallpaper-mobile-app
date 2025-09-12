@@ -9,7 +9,7 @@ export default function ForYou() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "#000", // active tab text color
+        tabBarActiveTintColor: "#fff", // active tab text color
         tabBarInactiveTintColor: "#888", // inactive tab text color
         tabBarLabelStyle: {
           fontSize: 14,
@@ -17,18 +17,22 @@ export default function ForYou() {
           textTransform: "none", // keep labels as typed
         },
         tabBarIndicatorStyle: {
-          backgroundColor: "#000", // underline indicator color
-          height: 3,
+          backgroundColor: "orange", // underline indicator color
+          height: 4,
+          width:"30%",
+          borderRadius:20,
+          alignItems:"center",
         },
         tabBarStyle: {
-          backgroundColor: "#fff", // top tab background
+          backgroundColor: "#000", // top tab background
+       
           elevation: 0, // remove shadow on Android
           borderBottomWidth: 1,
           borderBottomColor: "#eee",
         },
       }}
     >
-      <Tab.Screen name="Suggested" component={SuggestedScreen} />
+      <Tab.Screen name="Suggested"  component={SuggestedScreen} />
       <Tab.Screen name="Liked" component={LikeScreen} />
       <Tab.Screen name="Library" component={LibraryScreen} />
     </Tab.Navigator>
