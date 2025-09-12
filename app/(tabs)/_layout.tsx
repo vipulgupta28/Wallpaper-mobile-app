@@ -64,3 +64,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+
+
+// download wallpaper
+// wallpaper botoom sheet preview
+// like suggested and library separation
