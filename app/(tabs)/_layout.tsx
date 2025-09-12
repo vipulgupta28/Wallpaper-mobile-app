@@ -1,11 +1,10 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { Link, Slot } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons"; // Expo ships with Ionicons
 
 export default function Layout() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {/* Main page content */}
       <View style={styles.content}>
         <Slot />
@@ -34,7 +33,7 @@ export default function Layout() {
           </Pressable>
         </Link>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -42,6 +41,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    paddingTop:0,
   },
   content: {
     flex: 1,
@@ -67,5 +67,4 @@ const styles = StyleSheet.create({
 
 
 // download wallpaper
-// wallpaper botoom sheet preview
 // like suggested and library separation

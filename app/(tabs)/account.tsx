@@ -1,11 +1,10 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function Account() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {/* Header */}
       <Text style={styles.title}>Panels</Text>
       <Text style={styles.subtitle}>Sign in to save your data</Text>
@@ -40,7 +39,7 @@ export default function Account() {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -48,7 +47,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+   
     backgroundColor: "#F8F9FA",
+    
   },
   title: {
     fontSize: 28,
