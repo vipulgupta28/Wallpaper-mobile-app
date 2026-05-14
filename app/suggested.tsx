@@ -1,11 +1,7 @@
 import SplitView from "@/components/SplitView";
-import { useSuggestedWallpapers } from "@/hooks/useWallpaper"
-import { View, Text } from "react-native"
+import { useSuggestedWallpapers } from "@/hooks/useWallpaper";
 
-export default function SuggestedyScreen(){
-
-    const wallpapers = useSuggestedWallpapers();
-    return(
-        <SplitView />
-    )
+export default function SuggestedScreen() {
+  const wallpapers = useSuggestedWallpapers();
+  return <SplitView wallpapers={wallpapers} emptyMessage="No suggestions yet" />;
 }

@@ -1,26 +1,16 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+export const C = {
+  orange:      "#FF6B00",
+  orangeLight: "#FFF3EC",
+  black:       "#111111",
+  white:       "#FFFFFF",
+  surface:     "#F7F7F7",
+  border:      "#EBEBEB",
+  muted:       "#999999",
+  mutedDark:   "#666666",
+} as const;
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
+// Legacy export kept for template components (Collapsible, useThemeColor)
 export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+  light: { text: C.black, background: C.white, tint: C.orange, icon: C.muted, tabIconDefault: C.muted, tabIconSelected: C.orange },
+  dark:  { text: C.white, background: C.black, tint: C.orange, icon: C.muted, tabIconDefault: C.muted, tabIconSelected: C.orange },
 };
